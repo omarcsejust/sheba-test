@@ -84,4 +84,6 @@
 - username: admin
 - password: admin123
 
-4. All the config data has been set in `app>core>config.py` also `.env` file linked here. Variables can also be accessed from `.env` using Settings Instance.
+4. Categories have been seeded during on App strting, you can use `category_id` 1 to 4 for creating a Service.
+
+5. All the config data has been set in `app>core>config.py` also `.env` file linked here. Variables can also be accessed from `.env` using Settings Instance.
