@@ -72,13 +72,13 @@ class BookingCreate(BaseModel):
             raise ValueError('Phone number must be between 10 and 15 digits')
         return v
     
-    @field_validator("schedule_time")
-    def validate_schedule_time(cls, v: datetime):
-        if v.tzinfo is None:
-            v = v.replace(tzinfo=timezone.utc)  # Make it aware by assuming UTC
-        if v < datetime.now(timezone.utc):
-            raise ValueError("Schedule time cannot be in the past")
-        return v
+    # @field_validator("schedule_time")
+    # def validate_schedule_time(cls, v: datetime):
+    #     if v.tzinfo is None:
+    #         v = v.replace(tzinfo=timezone.utc)  # Make it aware by assuming UTC
+    #     if v < datetime.now(timezone.utc):
+    #         raise ValueError("Schedule time cannot be in the past")
+    #     return v
 
 class BookingOut(BaseModel):
     model_config = ConfigDict(
